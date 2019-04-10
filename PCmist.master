@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PCmist.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+
+<link href="JavaScript/jquery.bxslider.css" rel="stylesheet" />
+<!-- jQuery library (served from Google) -->
+<script src="JavaScript/jquery.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="JavaScript/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+    <title>PC Mist</title>
+    <script>
+        $(document).ready(function () {
+            
+            $('.bxslider').bxSlider();
+            $('.bxslider2').bxSlider();
+        });
+</script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <link href="StyleSheet.css" rel="Stylesheet" type="text/css" />
+
+</head>
+<body>
+
+
+    <form id="form1" runat="server">
+        <div id="Logotype">
+
+            <a href="Main.aspx"><img alt="" src="IMG/pcmistlogo.png" /></a>
+   
+</div>
+<div id="wrapper">
+<div id="container">
+<div id="leftmenu">
+<ul>
+<li><a href="Main.aspx">Home</a></li>
+<li><a href="Game.aspx">Games</a>
+<div id="submenu">
+<ul>
+
+<li><a href="MustPlay.aspx">Must Play</a></li>
+
+</ul>
+</div>
+</li>
+<li><a href="AboutUs.aspx">About us</a></li>
+<li><a href="Administration/ModLogin.aspx">Manage</a></li>
+</ul>
+</div>
+    
+
+        <div id="textcontent">
+        <asp:ContentPlaceHolder id="contentStart" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+    </div>
+    </form>
+    </div>    
+    </div>
+    
+    
+    
+</body>
+</html>
